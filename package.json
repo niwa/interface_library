@@ -1,7 +1,7 @@
 {
-  "name": "niwa-application-messages",
-  "version": "2.0.7",
-  "description": "Tool to display messages regarding the status of an online application",
+  "name": "niwa-interface-library",
+  "version": "1.0.0",
+  "description": "Contains common interface modules and components",
   "main": "dist/niwa-application-messages.umd.js",
   "module": "dist/index.js",
   "typings": "dist/index.d.ts",
@@ -20,13 +20,13 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/niwa/application_messages.git"
+    "url": "git+https://github.com/niwa/interface_library.git"
   },
   "author": "NIWA",
   "bugs": {
-    "url": "https://github.com/niwa/application_messages/issues"
+    "url": "https://github.com/niwa/interface_library/issues"
   },
-  "homepage": "https://github.com/niwa/application_messages#readme",
+  "homepage": "https://github.com/niwa/interface_library#readme",
   "dependencies": {},
   "devDependencies": {
     "@angular/common": "2.1.2",

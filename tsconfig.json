@@ -23,7 +23,7 @@
     "outDir": "dist",
     "baseUrl": "src",
     "paths": {
-      "niwa-application-messages": ["./index"]
+      "niwa-interface": ["./index"]
     }
   },
   "files": [

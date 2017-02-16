@@ -1,9 +1,7 @@
-import {NiwaApplicationMessagesModule} from './niwa-application-messages.module';
-import {NiwaApplicationMessagesComponent} from './niwa-application-messages.component';
-import {NiwaApplicationMessagesService} from './niwa-application-messages.service';
+import {NiwaInterfaceModule} from './niwa-interface.module';
+import {NiwaInterfaceFooterComponent} from './niwa-interface-footer.component';
 
 export {
-    NiwaApplicationMessagesModule,
-    NiwaApplicationMessagesComponent,
-    NiwaApplicationMessagesService
+    NiwaInterfaceFooterComponent,
+    NiwaInterfaceModule
 }

@@ -13,11 +13,11 @@ import { FormsModule, ReactiveFormsModule }    from "@angular/forms";
 import { AppComponent }   from './app.component';
 
 //noinspection TypeScriptCheckImport
-import { NiwaApplicationMessagesModule } from 'niwa-application-messages';
+import { NiwaInterfaceModule } from 'niwa-interface';
 import { Ng2UtilsModule } from 'ng2-utils';
 
 @NgModule({
-  imports: [BrowserModule, FormsModule, ReactiveFormsModule, Ng2UtilsModule, NiwaApplicationMessagesModule],
+  imports: [BrowserModule, FormsModule, ReactiveFormsModule, Ng2UtilsModule, NiwaInterfaceModule],
   declarations: [AppComponent],
   bootstrap: [ AppComponent ]
 })

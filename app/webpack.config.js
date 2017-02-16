@@ -4,7 +4,7 @@ const config = {
   resolve: {
     extensions: ['', '.ts', '.webpack.js', '.web.js', '.js'],
     alias: {
-      'niwa-application-messages': '../src/index.ts'
+      'niwa-interface': '../src/index.ts'
     }
   },
   devtool: 'source-map',
