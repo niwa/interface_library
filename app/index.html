@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Angular2 Npm Package Example</title>
+  <link rel="stylesheet" href="//styles.niwa.co.nz/dist/css/bootstrap.min.css"/>
+  <link rel="stylesheet" href="//styles.niwa.co.nz/dist/css/bootstrap-theme.min.css"/>
+  <style> #my-div .datetime-picker { background: #fff; } </style>
+</head>
+
+<body>
+<my-app>Loading...</my-app>
+<script>
+  document.write('<base href="' + document.location + '" />');
+
+  var script = document.createElement("script");
+  script.src = location.pathname.replace('index.html', '') + 'build/app.js';
+  (document.body).appendChild(script);
+</script>
+</body>
+</html>
