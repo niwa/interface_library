@@ -1,13 +1,13 @@
 (function webpackUniversalModuleDefinition(root, factory) {
 	if(typeof exports === 'object' && typeof module === 'object')
-		module.exports = factory(require("@angular/core"));
+		module.exports = factory(require("@angular/core"), require("@angular/common"));
 	else if(typeof define === 'function' && define.amd)
-		define(["@angular/core"], factory);
+		define(["@angular/core", "@angular/common"], factory);
 	else if(typeof exports === 'object')
-		exports["niwa-application-messages"] = factory(require("@angular/core"));
+		exports["niwa-application-messages"] = factory(require("@angular/core"), require("@angular/common"));
 	else
-		root["niwa-application-messages"] = factory(root["@angular/core"]);
-})(this, function(__WEBPACK_EXTERNAL_MODULE_2__) {
+		root["niwa-application-messages"] = factory(root["@angular/core"], root["@angular/common"]);
+})(this, function(__WEBPACK_EXTERNAL_MODULE_2__, __WEBPACK_EXTERNAL_MODULE_3__) {
 return /******/ (function(modules) { // webpackBootstrap
 /******/ 	// The module cache
 /******/ 	var installedModules = {};
@@ -57,7 +57,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	"use strict";
 	var niwa_interface_module_1 = __webpack_require__(1);
 	exports.NiwaInterfaceModule = niwa_interface_module_1.NiwaInterfaceModule;
-	var niwa_interface_footer_component_1 = __webpack_require__(3);
+	var niwa_interface_footer_component_1 = __webpack_require__(4);
 	exports.NiwaInterfaceFooterComponent = niwa_interface_footer_component_1.NiwaInterfaceFooterComponent;
 
 
@@ -76,13 +76,14 @@ return /******/ (function(modules) { // webpackBootstrap
 	    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 	};
 	var core_1 = __webpack_require__(2);
-	var niwa_interface_footer_component_1 = __webpack_require__(3);
+	var common_1 = __webpack_require__(3);
+	var niwa_interface_footer_component_1 = __webpack_require__(4);
 	var NiwaInterfaceModule = (function () {
 	    function NiwaInterfaceModule() {
 	    }
 	    NiwaInterfaceModule = __decorate([
 	        core_1.NgModule({
-	            imports: [],
+	            imports: [common_1.CommonModule],
 	            declarations: [niwa_interface_footer_component_1.NiwaInterfaceFooterComponent],
 	            exports: [niwa_interface_footer_component_1.NiwaInterfaceFooterComponent],
 	            entryComponents: [],
@@ -103,6 +104,12 @@ return /******/ (function(modules) { // webpackBootstrap
 
 /***/ },
 /* 3 */
+/***/ function(module, exports) {
+
+	module.exports = __WEBPACK_EXTERNAL_MODULE_3__;
+
+/***/ },
+/* 4 */
 /***/ function(module, exports, __webpack_require__) {
 
 	"use strict";
@@ -121,11 +128,19 @@ return /******/ (function(modules) { // webpackBootstrap
 	    }
 	    NiwaInterfaceFooterComponent.prototype.ngOnInit = function () {
 	    };
+	    __decorate([
+	        core_1.Input(), 
+	        __metadata('design:type', String)
+	    ], NiwaInterfaceFooterComponent.prototype, "versionNumber", void 0);
+	    __decorate([
+	        core_1.Input(), 
+	        __metadata('design:type', String)
+	    ], NiwaInterfaceFooterComponent.prototype, "termsUrl", void 0);
 	    NiwaInterfaceFooterComponent = __decorate([
 	        core_1.Component({
 	            selector: 'niwa-interface-footer',
 	            providers: [],
-	            template: "\n<footer role=\"contentinfo\">\n\t<div class=\"container-fluid\">\n\t\t<div class=\"row\">\n\t\t\t<div class=\"col-md-8 col-xs-8\">\n\t\t\t\t<ul>\n\t\t\t\t\t<li>VERSION NUMBER</li>\n\t\t\t\t\t<li id=\"copyrightNiwa\">Copyright 2017 NIWA</li>\n\t\t\t\t</ul>\n\t\t\t</div>\n\t\t\t<div class=\"col-md-4 col-xs-4\">\n\t\t\t\t<!--<ul class=\"pull-right\">\n                    <li >right footer notes</li>\n                </ul>-->\n\t\t\t</div>\n\t\t</div>\n\t</div>\n\t<style type=\"text/css\">\n\t\tbody { margin-bottom: 60px; }\n\t</style>\n</footer>\n"
+	            template: "\n<footer role=\"contentinfo\">\n\t<div class=\"container-fluid\">\n\t\t<div class=\"row\">\n\t\t\t<div class=\"col-md-8 col-xs-8\">\n\t\t\t\t<ul>\n\t\t\t\t\t<li>{{versionNumber}}</li>\n\t\t\t\t\t<li id=\"copyrightNiwa\">Copyright 2017 NIWA</li>\n\t\t\t\t\t<li *ngIf=\"termsUrl\"><a href=\"{{termsUrl}}\">Terms and Conditions</a></li>\n\t\t\t\t</ul>\n\t\t\t</div>\n\t\t\t<div class=\"col-md-4 col-xs-4\">\n\t\t\t\t<!--<ul class=\"pull-right\">\n                    <li >right footer notes</li>\n                </ul>-->\n\t\t\t</div>\n\t\t</div>\n\t</div>\n\t<style type=\"text/css\">\n\t\tbody { margin-bottom: 60px; }\n\t</style>\n</footer>\n"
 	        }), 
 	        __metadata('design:paramtypes', [])
 	    ], NiwaInterfaceFooterComponent);
