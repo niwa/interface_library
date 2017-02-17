@@ -1,4 +1,4 @@
-import {Component} from '@angular/core';
+import {Component, Input} from '@angular/core';
 
 @Component({
     selector: 'niwa-interface-footer',
@@ -9,8 +9,9 @@ import {Component} from '@angular/core';
 		<div class="row">
 			<div class="col-md-8 col-xs-8">
 				<ul>
-					<li>VERSION NUMBER</li>
+					<li>{{versionNumber}}</li>
 					<li id="copyrightNiwa">Copyright 2017 NIWA</li>
+					<li *ngIf="termsUrl"><a href="{{termsUrl}}">Terms and Conditions</a></li>
 				</ul>
 			</div>
 			<div class="col-md-4 col-xs-4">
@@ -27,7 +28,8 @@ import {Component} from '@angular/core';
 `
 })
 export class NiwaInterfaceFooterComponent {
-
+  @Input() versionNumber: string;
+  @Input() termsUrl: string;
 
     constructor() {
     }
