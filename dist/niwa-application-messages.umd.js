@@ -1,13 +1,13 @@
 (function webpackUniversalModuleDefinition(root, factory) {
 	if(typeof exports === 'object' && typeof module === 'object')
-		module.exports = factory(require("@angular/core"), require("@angular/common"));
+		module.exports = factory(require("@angular/core"), require("@angular/common"), require("@angular/router"));
 	else if(typeof define === 'function' && define.amd)
-		define(["@angular/core", "@angular/common"], factory);
+		define(["@angular/core", "@angular/common", "@angular/router"], factory);
 	else if(typeof exports === 'object')
-		exports["niwa-application-messages"] = factory(require("@angular/core"), require("@angular/common"));
+		exports["niwa-application-messages"] = factory(require("@angular/core"), require("@angular/common"), require("@angular/router"));
 	else
-		root["niwa-application-messages"] = factory(root["@angular/core"], root["@angular/common"]);
-})(this, function(__WEBPACK_EXTERNAL_MODULE_2__, __WEBPACK_EXTERNAL_MODULE_3__) {
+		root["niwa-application-messages"] = factory(root["@angular/core"], root["@angular/common"], root["@angular/router"]);
+})(this, function(__WEBPACK_EXTERNAL_MODULE_2__, __WEBPACK_EXTERNAL_MODULE_3__, __WEBPACK_EXTERNAL_MODULE_4__) {
 return /******/ (function(modules) { // webpackBootstrap
 /******/ 	// The module cache
 /******/ 	var installedModules = {};
@@ -57,7 +57,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	"use strict";
 	var niwa_interface_module_1 = __webpack_require__(1);
 	exports.NiwaInterfaceModule = niwa_interface_module_1.NiwaInterfaceModule;
-	var niwa_interface_footer_component_1 = __webpack_require__(4);
+	var niwa_interface_footer_component_1 = __webpack_require__(5);
 	exports.NiwaInterfaceFooterComponent = niwa_interface_footer_component_1.NiwaInterfaceFooterComponent;
 
 
@@ -77,13 +77,14 @@ return /******/ (function(modules) { // webpackBootstrap
 	};
 	var core_1 = __webpack_require__(2);
 	var common_1 = __webpack_require__(3);
-	var niwa_interface_footer_component_1 = __webpack_require__(4);
+	var router_1 = __webpack_require__(4);
+	var niwa_interface_footer_component_1 = __webpack_require__(5);
 	var NiwaInterfaceModule = (function () {
 	    function NiwaInterfaceModule() {
 	    }
 	    NiwaInterfaceModule = __decorate([
 	        core_1.NgModule({
-	            imports: [common_1.CommonModule],
+	            imports: [common_1.CommonModule, router_1.RouterModule],
 	            declarations: [niwa_interface_footer_component_1.NiwaInterfaceFooterComponent],
 	            exports: [niwa_interface_footer_component_1.NiwaInterfaceFooterComponent],
 	            entryComponents: [],
@@ -110,6 +111,12 @@ return /******/ (function(modules) { // webpackBootstrap
 
 /***/ },
 /* 4 */
+/***/ function(module, exports) {
+
+	module.exports = __WEBPACK_EXTERNAL_MODULE_4__;
+
+/***/ },
+/* 5 */
 /***/ function(module, exports, __webpack_require__) {
 
 	"use strict";
