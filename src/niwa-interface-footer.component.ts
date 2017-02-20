@@ -11,7 +11,7 @@ import {Component, Input} from '@angular/core';
 				<ul>
 					<li>{{versionNumber}}</li>
 					<li id="copyrightNiwa">Copyright 2017 NIWA</li>
-					<li *ngIf="termsUrl"><a href="{{termsUrl}}">Terms and Conditions</a></li>
+					<li *ngIf="termsUrl"><a routerLink="{{termsUrl}}">Terms and Conditions</a></li>
 				</ul>
 			</div>
 			<div class="col-md-4 col-xs-4">
