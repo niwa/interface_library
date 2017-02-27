@@ -1,6 +1,6 @@
 {
   "name": "niwa-interface-library",
-  "version": "1.0.4",
+  "version": "1.0.5",
   "description": "Contains common interface modules and components",
   "main": "dist/niwa-application-messages.umd.js",
   "module": "dist/index.js",
