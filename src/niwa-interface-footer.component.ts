@@ -11,7 +11,8 @@ import {Router} from '@angular/router';
 			<div class="col-md-8 col-xs-8">
 				<ul>
 					<li>{{versionNumber}}</li>
-					<li id="copyrightNiwa">Copyright 2017 NIWA</li>
+					<li *ngIf="alternateMessage.length > 0" id="copyrightNiwa">{{alternateMessage}}</li>
+					<li *ngIf="!alternateMessage.length > 0" id="copyrightNiwa">Copyright 2017 NIWA</li>
 					<li *ngIf="termsUrl"><a routerLink="{{termsUrl}}">Terms and Conditions</a></li>
 				</ul>
 			</div>
@@ -29,6 +30,7 @@ import {Router} from '@angular/router';
 `
 })
 export class NiwaInterfaceFooterComponent {
+  @Input() alternateMessage: string;
   @Input() versionNumber: string;
   @Input() termsUrl: string;
 
