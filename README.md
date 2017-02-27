@@ -4,7 +4,7 @@ This  module shows NIWA application messages in an Angular 2 project.
 
 ## How Does It Work
 
-The service fetches a status message from the Application Messages internal server and displays it in a standard div. THis requires changes to the apache file to allow add ProxyPass settings.
+The service fetches a status message from the Application Messages internal server and displays it in a standard div. This requires changes to the apache file to allow add ProxyPass settings.
 
 
 
