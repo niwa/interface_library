@@ -1,15 +1,21 @@
 import { NgModule } from '@angular/core';
-import { CommonModule } from '@angular/common';
-import {RouterModule} from '@angular/router';
-
+import {CommonModule, APP_BASE_HREF} from '@angular/common';
+import { BrowserModule} from '@angular/platform-browser';
+import { Router } from '@angular/router';
 
 import {NiwaInterfaceFooterComponent} from './niwa-interface-footer.component'
+import {RouterModule} from "@angular/router";
 
 @NgModule({
-  imports: [CommonModule, RouterModule],
+  imports: [CommonModule, BrowserModule, RouterModule],
   declarations: [NiwaInterfaceFooterComponent],
   exports:  [NiwaInterfaceFooterComponent],
   entryComponents: [],
-  providers: []
+  providers: [{
+      provide: APP_BASE_HREF,
+      useValue: '/'
+  }],
+    bootstrap: [NiwaInterfaceFooterComponent]
+
 })
 export class NiwaInterfaceModule {}

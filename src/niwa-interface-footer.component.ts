@@ -14,6 +14,8 @@ import {Router} from '@angular/router';
 					<li *ngIf="alternateMessage.length > 0" id="copyrightNiwa">{{alternateMessage}}</li>
 					<li *ngIf="!alternateMessage.length > 0" id="copyrightNiwa">Copyright 2017 NIWA</li>
 					<li *ngIf="termsUrl"><a routerLink="{{termsUrl}}">Terms and Conditions</a></li>
+                    <li><a [routerLink]="glossary">Glossary</a></li>
+                    <li><a href="http://getfirewise.org.nz/Rural-FWSYS-Form/orderform.htm">register now</a></li>
 				</ul>
 			</div>
 			<div class="col-md-4 col-xs-4">
