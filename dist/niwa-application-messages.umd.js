@@ -1,13 +1,13 @@
 (function webpackUniversalModuleDefinition(root, factory) {
 	if(typeof exports === 'object' && typeof module === 'object')
-		module.exports = factory(require("@angular/core"), require("@angular/common"), require("@angular/router"));
+		module.exports = factory(require("@angular/core"), require("@angular/common"), require("@angular/platform-browser"), require("@angular/router"));
 	else if(typeof define === 'function' && define.amd)
-		define(["@angular/core", "@angular/common", "@angular/router"], factory);
+		define(["@angular/core", "@angular/common", "@angular/platform-browser", "@angular/router"], factory);
 	else if(typeof exports === 'object')
-		exports["niwa-application-messages"] = factory(require("@angular/core"), require("@angular/common"), require("@angular/router"));
+		exports["niwa-application-messages"] = factory(require("@angular/core"), require("@angular/common"), require("@angular/platform-browser"), require("@angular/router"));
 	else
-		root["niwa-application-messages"] = factory(root["@angular/core"], root["@angular/common"], root["@angular/router"]);
-})(this, function(__WEBPACK_EXTERNAL_MODULE_2__, __WEBPACK_EXTERNAL_MODULE_3__, __WEBPACK_EXTERNAL_MODULE_4__) {
+		root["niwa-application-messages"] = factory(root["@angular/core"], root["@angular/common"], root["@angular/platform-browser"], root["@angular/router"]);
+})(this, function(__WEBPACK_EXTERNAL_MODULE_2__, __WEBPACK_EXTERNAL_MODULE_3__, __WEBPACK_EXTERNAL_MODULE_4__, __WEBPACK_EXTERNAL_MODULE_6__) {
 return /******/ (function(modules) { // webpackBootstrap
 /******/ 	// The module cache
 /******/ 	var installedModules = {};
@@ -77,18 +77,23 @@ return /******/ (function(modules) { // webpackBootstrap
 	};
 	var core_1 = __webpack_require__(2);
 	var common_1 = __webpack_require__(3);
-	var router_1 = __webpack_require__(4);
+	var platform_browser_1 = __webpack_require__(4);
 	var niwa_interface_footer_component_1 = __webpack_require__(5);
+	var router_1 = __webpack_require__(6);
 	var NiwaInterfaceModule = (function () {
 	    function NiwaInterfaceModule() {
 	    }
 	    NiwaInterfaceModule = __decorate([
 	        core_1.NgModule({
-	            imports: [common_1.CommonModule, router_1.RouterModule],
+	            imports: [common_1.CommonModule, platform_browser_1.BrowserModule, router_1.RouterModule],
 	            declarations: [niwa_interface_footer_component_1.NiwaInterfaceFooterComponent],
 	            exports: [niwa_interface_footer_component_1.NiwaInterfaceFooterComponent],
 	            entryComponents: [],
-	            providers: []
+	            providers: [{
+	                    provide: common_1.APP_BASE_HREF,
+	                    useValue: '/'
+	                }],
+	            bootstrap: [niwa_interface_footer_component_1.NiwaInterfaceFooterComponent]
 	        }), 
 	        __metadata('design:paramtypes', [])
 	    ], NiwaInterfaceModule);
@@ -151,7 +156,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	        core_1.Component({
 	            selector: 'niwa-interface-footer',
 	            providers: [],
-	            template: "\n<footer role=\"contentinfo\">\n\t<div class=\"container-fluid\">\n\t\t<div class=\"row\">\n\t\t\t<div class=\"col-md-8 col-xs-8\">\n\t\t\t\t<ul>\n\t\t\t\t\t<li>{{versionNumber}}</li>\n\t\t\t\t\t<li *ngIf=\"alternateMessage.length > 0\" id=\"copyrightNiwa\">{{alternateMessage}}</li>\n\t\t\t\t\t<li *ngIf=\"!alternateMessage.length > 0\" id=\"copyrightNiwa\">Copyright 2017 NIWA</li>\n\t\t\t\t\t<li *ngIf=\"termsUrl\"><a routerLink=\"{{termsUrl}}\">Terms and Conditions</a></li>\n\t\t\t\t</ul>\n\t\t\t</div>\n\t\t\t<div class=\"col-md-4 col-xs-4\">\n\t\t\t\t<!--<ul class=\"pull-right\">\n                    <li >right footer notes</li>\n                </ul>-->\n\t\t\t</div>\n\t\t</div>\n\t</div>\n\t<style type=\"text/css\">\n\t\tbody { margin-bottom: 60px; }\n\t</style>\n</footer>\n"
+	            template: "\n<footer role=\"contentinfo\">\n\t<div class=\"container-fluid\">\n\t\t<div class=\"row\">\n\t\t\t<div class=\"col-md-8 col-xs-8\">\n\t\t\t\t<ul>\n\t\t\t\t\t<li>{{versionNumber}}</li>\n\t\t\t\t\t<li *ngIf=\"alternateMessage.length > 0\" id=\"copyrightNiwa\">{{alternateMessage}}</li>\n\t\t\t\t\t<li *ngIf=\"!alternateMessage.length > 0\" id=\"copyrightNiwa\">Copyright 2017 NIWA</li>\n\t\t\t\t\t<li *ngIf=\"termsUrl\"><a routerLink=\"{{termsUrl}}\">Terms and Conditions</a></li>\n                    <li><a [routerLink]=\"glossary\">Glossary</a></li>\n                    <li><a href=\"http://getfirewise.org.nz/Rural-FWSYS-Form/orderform.htm\">register now</a></li>\n\t\t\t\t</ul>\n\t\t\t</div>\n\t\t\t<div class=\"col-md-4 col-xs-4\">\n\t\t\t\t<!--<ul class=\"pull-right\">\n                    <li >right footer notes</li>\n                </ul>-->\n\t\t\t</div>\n\t\t</div>\n\t</div>\n\t<style type=\"text/css\">\n\t\tbody { margin-bottom: 60px; }\n\t</style>\n</footer>\n"
 	        }), 
 	        __metadata('design:paramtypes', [])
 	    ], NiwaInterfaceFooterComponent);
@@ -159,6 +164,12 @@ return /******/ (function(modules) { // webpackBootstrap
 	}());
 	exports.NiwaInterfaceFooterComponent = NiwaInterfaceFooterComponent;
 
+
+/***/ },
+/* 6 */
+/***/ function(module, exports) {
+
+	module.exports = __WEBPACK_EXTERNAL_MODULE_6__;
 
 /***/ }
 /******/ ])
